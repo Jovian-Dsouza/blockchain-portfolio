@@ -9,7 +9,11 @@ import {
 import {
   faMapLocationDot,
   faEnvelope,
+  faXmark,
+  faBarsStaggered,
 } from "@fortawesome/free-solid-svg-icons";
+
+import React, { useState } from "react";
 
 import htmlSvg from "./images/skills/html.svg";
 import javascriptSvg from "./images/skills/javascript.svg";
@@ -23,8 +27,42 @@ function App() {
   const navLinks = ["home", "about", "projects", "contact"];
   const techStacks = [htmlSvg, javascriptSvg, reactSvg, tailwindSvg];
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div className="min-h-screen mx-auto bg-white text-grayishBlack">
+      {/* Mobile menu */}
+      <div
+        className={`${isOpen ? "open-menu hamburger" : "closed-menu"}`}
+        onClick={handleMenuToggle}
+      >
+        {/* x mark icon */}
+        <div className="flex justify-end p-10">
+          <FontAwesomeIcon
+            icon={faXmark}
+            className="w-8 h-8 hover:text-darkishBlue"
+          />
+        </div>
+
+        <div className="flex flex-col items-center justify-center">
+          {/* Nav links */}
+          <div className="flex flex-col space-y-10">
+            {navLinks.map((link, index) => (
+              <a
+                href={"#" + link}
+                key={index}
+                className="text-center text-2xl font-semibold capitalize transition-all duration-200 hover:text-darkishBlue"
+              >
+                {link}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Navigation Header */}
       <nav className="flex items-center justify-between w-full px-16 py-6 shadow-md">
         {/* logo */}
@@ -35,7 +73,7 @@ function App() {
         </div>
 
         {/* Menu links */}
-        <div class="flex items-center space-x-6 text-lg font-semibold decoration-2 underline-offset-8">
+        <div class="hidden md:flex items-center space-x-6 text-lg font-semibold decoration-2 underline-offset-8">
           {navLinks.map((link, index) => (
             <a
               key={index}
@@ -46,6 +84,13 @@ function App() {
             </a>
           ))}
         </div>
+
+        {/* Hamburger */}
+        <FontAwesomeIcon
+          icon={faBarsStaggered}
+          className="md:hidden w-6 h-6 hover:text-darkishBlue"
+          onClick={handleMenuToggle}
+        />
       </nav>
 
       <div className="my-1"></div>
@@ -222,7 +267,9 @@ function App() {
       {/* footer */}
       <footer className="flex items-center justify-center bg-grayishBlack text-white px-14 py-12">
         <div className="flex flex-col w-full max-w-xl justify-center items-center md:justify-between md:flex-row">
-          <h1 className="font-bold text-lg">Copyright © 2023. All rights are reserved</h1>
+          <h1 className="font-bold text-lg">
+            Copyright © 2023. All rights are reserved
+          </h1>
 
           {/* socials */}
           <div className="flex space-x-4">

@@ -29,3 +29,17 @@
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
 }
+
+
+.closed-menu {
+  left: -100% !important;
+  @apply hidden;
+}
+
+.open-menu {
+  left: 0 !important;
+}
+
+.hamburger {
+  @apply flex flex-col space-y-20 w-screen fixed top-0 right-0 h-screen z-50 bg-white transition-all duration-300 ease-in-out;
+}
