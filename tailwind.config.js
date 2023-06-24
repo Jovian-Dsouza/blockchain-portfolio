@@ -11,13 +11,14 @@ module.exports = {
     extend: {
       fontFamily: ["Poppins", "sans-serif"],
       colors: {
-        grayishBlack: '#2d2e32',
-        darkishBlue: '#147efb',
-        grayishWhite: '#f9f9f9',
+        grayishBlack: "#2d2e32",
+        darkishBlue: "#147efb",
+        grayishWhite: "#f9f9f9",
+        lightGray: "#767676",
       },
       animation: {
-        'spin-slow': 'spin 9s linear infinite',
-      }
+        "spin-slow": "spin 9s linear infinite",
+      },
     },
   },
   plugins: [],
