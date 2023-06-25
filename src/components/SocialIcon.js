@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import { socialLinks } from "../contants";
+import { socialLinks } from "../data/contants";
 
 const brandIcon = {
   linkedin: faLinkedin,

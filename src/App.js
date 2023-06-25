@@ -1,5 +1,4 @@
 import "./App.css";
-import { navLinks } from "./contants";
 import React, { useState } from "react";
 
 import { MobileMenu } from "./components/MobileMenu";
@@ -9,6 +8,9 @@ import { About } from "./components/About";
 import { Project } from "./components/Project";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+
+import { navLinks, projectSampleList } from "./data/contants";
+
 
 function App() {
 
@@ -38,7 +40,7 @@ function App() {
       <About />
 
       {/* Project section */}
-      <Project />
+      <Project projectList={projectSampleList} />
 
       {/* Contact */}
       <Contact />
