@@ -33,17 +33,19 @@ export function About(props) {
           About me
         </h2>
         <h1 className="max-w-md text-center text-2xl font-bold md:text-left">
-          A dedicated Full Stack Blockchain Developer based in India📍
+          A dedicated Full Stack Blockchain Developer based in Goa, India📍
         </h1>
         <p className="max-w-lg text-center text-md md:text-left">
-          As a Junior Front-End Developer, I possess an impressive arsenal of
-          skills in HTML, CSS, JavaScript, React, Tailwind, and SCSS. I excel in
-          designing and maintaining responsive websites that offer a smooth user
-          experience. My expertise lies in crafting dynamic, engaging interfaces
-          through writing clean and optimized code and utilizing cutting-edge
-          development tools and techniques. I am also a team player who thrives
-          in collaborating with cross-functional teams to produce outstanding
-          web applications.
+          I am a skilled full stack blockchain developer, proficient in the
+          latest technologies and frameworks. With expertise in both front-end
+          and back-end development, I am dedicated to creating robust and secure
+          blockchain solutions. Leveraging my strong knowledge of smart
+          contracts, decentralized applications, and cryptography, I strive to
+          deliver innovative solutions that drive digital transformation. As a
+          full stack blockchain developer, I am committed to staying updated
+          with emerging trends, ensuring that my work aligns with industry best
+          practices. Let's collaborate to shape the future of blockchain
+          technology.
         </p>
       </div>
     </section>
