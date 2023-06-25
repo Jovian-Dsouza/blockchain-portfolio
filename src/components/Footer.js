@@ -1,5 +1,5 @@
 import { SocialIcon } from "./SocialIcon";
-import { socialLinks } from "../contants";
+import { socialLinks } from "../data/contants";
 
 
 export function Footer(props) {

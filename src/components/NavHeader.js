@@ -7,14 +7,14 @@ export function NavHeader(props) {
   return (
     <nav className="sticky top-0 z-40 bg-white flex items-center justify-between w-full px-16 py-6 shadow-md">
       {/* logo */}
-      <div class="flex items-center">
-        <span class="text-2xl font-bold underline-offset-8 hover:underline">
+      <div className="flex items-center">
+        <span className="text-2xl font-bold underline-offset-8 hover:underline">
           Jovian.Dsouza
         </span>
       </div>
 
       {/* Menu links */}
-      <div class="hidden md:flex items-center space-x-6 text-lg font-semibold decoration-2 underline-offset-8">
+      <div className="hidden md:flex items-center space-x-6 text-lg font-semibold decoration-2 underline-offset-8">
         {props.menu.map((link, index) => (
           <a
             key={index}

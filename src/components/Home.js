@@ -1,7 +1,6 @@
 import "./Home.css";
 import profile_pic from "../images/jovian-gray.png";
-import { socialLinks, techStacks } from "../contants";
-
+import { socialLinks, techStacks } from "../data/contants";
 
 import { SocialIcon } from "./SocialIcon";
 
@@ -52,8 +51,8 @@ export function Home(props) {
           {/* Tech stack icons */}
           <div className="flex items-center justify-center space-x-4 md:space-x-8">
             {techStacks.map((imgLink, index) => (
-              <div className="p-5 shadow-lg rounded-full">
-                <img key={index} src={imgLink} alt="" className="w-8 h-8" />
+              <div key={index} className="p-5 shadow-lg rounded-full">
+                <img src={imgLink} alt="" className="w-8 h-8" />
               </div>
             ))}
           </div>
