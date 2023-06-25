@@ -25,6 +25,15 @@ export const projectSampleList = [
   },
 
   {
+    name: "Jovi Dex",
+    images: ["https://iili.io/HPSE3Lx.jpg"],
+    desc: "Created a visually captivating DEX platform with Next.js, incorporating the 1inch API for seamless token swapping. Successfully tackled blockchain transaction and API integration challenges, ensuring a user-friendly experience.",
+    github: "https://github.com/Jovian-Dsouza/jovi-dex",
+    demo: "https://jovi-dex.vercel.app/",
+    techStack: ["NextJs", "TailwindCSS", "Morallis"],
+  },
+
+  {
     name: "Jovi Token",
     images: [
       "https://github.com/Jovian-Dsouza/JoviTokenIco-contracts/blob/main/images/screenshot.png?raw=true",
