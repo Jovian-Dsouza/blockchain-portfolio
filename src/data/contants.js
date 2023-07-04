@@ -14,6 +14,17 @@ export const techStacks = [htmlSvg, javascriptSvg, reactSvg, tailwindSvg];
 
 export const projectSampleList = [
   {
+    name: "Enigma Paste",
+    images: [
+      "https://github.com/Jovian-Dsouza/enigma-paste/blob/main/images/home.png?raw=true",
+    ],
+    desc: "Enigma Paste is a decentralized pastebin platform that prioritizes privacy, security, and collaboration. It ensures user data control, confidential sharing with encryption, simplified code sharing, tamper-proof records, and integrates with Web3 technologies. It provides a secure and resilient solution for decentralized information sharing and storage",
+    github: "https://github.com/Jovian-Dsouza/enigma-paste",
+    demo: "https://enigma-paste.vercel.app/",
+    techStack: ["Next.js", "Tailwindcss", "solidity"],
+  },
+
+  {
     name: "AI NFT",
     images: [
       "https://github.com/Jovian-Dsouza/AI-nft/blob/dalle/images/demo_mint.png?raw=true",
@@ -33,14 +44,14 @@ export const projectSampleList = [
     techStack: ["NextJs", "TailwindCSS", "Morallis"],
   },
 
-  {
-    name: "Jovi Token",
-    images: [
-      "https://github.com/Jovian-Dsouza/JoviTokenIco-contracts/blob/main/images/screenshot.png?raw=true",
-    ],
-    desc: "JoviToken is an ERC20-based token deployed on Ethereum's Goerli test network. It includes smart contracts for a minted, capped, and timed crowdsale with individual contribution caps and refund options. The project also features token time vesting, distribution, and comprehensive test cases.",
-    github: "https://github.com/Jovian-Dsouza/JoviTokenIco-contracts",
-    demo: "https://jovitokenico.joviandsouza.repl.co/",
-    techStack: ["Hardhat", "Solidity", "OpenZeppelin"],
-  },
+  // {
+  //   name: "Jovi Token",
+  //   images: [
+  //     "https://github.com/Jovian-Dsouza/JoviTokenIco-contracts/blob/main/images/screenshot.png?raw=true",
+  //   ],
+  //   desc: "JoviToken is an ERC20-based token deployed on Ethereum's Goerli test network. It includes smart contracts for a minted, capped, and timed crowdsale with individual contribution caps and refund options. The project also features token time vesting, distribution, and comprehensive test cases.",
+  //   github: "https://github.com/Jovian-Dsouza/JoviTokenIco-contracts",
+  //   demo: "https://jovitokenico.joviandsouza.repl.co/",
+  //   techStack: ["Hardhat", "Solidity", "OpenZeppelin"],
+  // },
 ];
