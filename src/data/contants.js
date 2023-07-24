@@ -14,6 +14,16 @@ export const techStacks = [htmlSvg, javascriptSvg, reactSvg, tailwindSvg];
 
 export const projectSampleList = [
   {
+    name: "ChecKnights",
+    images: [
+      "https://github.com/Jovian-Dsouza/crypto-checkmate/blob/main/images/game-page.png?raw=true",
+    ],
+    desc: "The decentralized chess game on the Flow blockchain provides a secure, transparent, and fair gaming platform. It allows players to enjoy chess against AI, friends, or random opponents without the need for wallets, simplifying user access and asset management, making chess accessible to everyone.",
+    github: "https://github.com/Jovian-Dsouza/crypto-checkmate/",
+    demo: "https://crypto-checkmate.vercel.app/",
+    techStack: ["Flow", "Ably", "Next.js"],
+  },
+  {
     name: "Enigma Paste",
     images: [
       "https://github.com/Jovian-Dsouza/enigma-paste/blob/main/images/home.png?raw=true",
