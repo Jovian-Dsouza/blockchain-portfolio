@@ -14,6 +14,26 @@ export const techStacks = [htmlSvg, javascriptSvg, reactSvg, tailwindSvg];
 
 export const projectSampleList = [
   {
+    name: "BitBirdie",
+    images: [
+      "https://github.com/Jovian-Dsouza/bitbirdie-nextjs/blob/main/imgs/chat.png?raw=true",
+    ],
+    desc: "BitBirdie is an AI-powered cryptocurrency wallet designed to simplify web3 transactions using natural language processing. Built with Okto wallet and AI technology, BitBirdie aims to make crypto accessible to all.",
+    github: "https://github.com/Jovian-Dsouza/bitbirdie-nextjs",
+    demo: "https://bitbirdie.vercel.app/",
+    techStack: ["Next.js", "Solana", "Tailwind", "LLM"],
+  },
+  {
+    name: "PayChatAI (NEAR hackathon Winner)",
+    images: [
+      "https://github.com/Jovian-Dsouza/paychatai/blob/main/imgs/paychatai_landing.png?raw=true",
+    ],
+    desc: "PayChatAI is a platform that empowers users to create, instruct, and monetize GPT models effortlessly. With our user-friendly interface, you can seamlessly craft and fine-tune your own ChatGPT-like models tailored to your specific needs. Leveraging Nevermind's integrated payment widget, creators can monetize their models with ease.",
+    github: "https://github.com/Jovian-Dsouza/paychatai",
+    demo: "https://paychatai.vercel.app/",
+    techStack: ["Next.js", "Avalance", "Tailwind", "Payments"],
+  },
+  {
     name: "ChecKnights",
     images: [
       "https://github.com/Jovian-Dsouza/crypto-checkmate/blob/main/images/game-page.png?raw=true",
