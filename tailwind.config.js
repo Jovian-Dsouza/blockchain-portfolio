@@ -1,24 +1,25 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
-    screens: {
-      sm: "480px",
-      md: "768px",
-      lg: "1020px",
-      xl: "1440px",
-    },
     extend: {
-      fontFamily: ["Poppins", "sans-serif"],
       colors: {
-        grayishBlack: "#2d2e32",
-        darkishBlue: "#147efb",
-        grayishWhite: "#f9f9f9",
-        lightGray: "#767676",
+        primary: "#A293FF",
+        secondary: "#00F0FF",
+        accent: "#000000",
+        accent2: "#8E8E8E",
+        gray: "#F1F1F1",
       },
-      animation: {
-        "spin-slow": "spin 9s linear infinite",
-      },
+    },
+    fontFamily: {
+      montserrat: ["var(--font-montserrat)", ...fontFamily.sans],
+      poppins: ["var(--font-poppins)", ...fontFamily.sans],
     },
   },
   plugins: [],
