@@ -15,6 +15,13 @@ import styles from "./home.module.css";
 
 export const projectList = [
   {
+    slug: "okto-rn-sdk",
+    title: "Okto React Native SDK",
+    image: "https://i3.ytimg.com/vi/d0VWSzRpm7U/maxresdefault.jpg",
+    repositoryUrl: "https://github.com/okto-hq/okto-sdk-react-native",
+    demoUrl: "https://youtu.be/d0VWSzRpm7U",
+  },
+  {
     slug: "bitbirdie",
     title: "BitBirdie (Solana Okto Track Winner 🎉)",
     image:
