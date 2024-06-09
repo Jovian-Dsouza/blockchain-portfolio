@@ -14,54 +14,54 @@ import { FiFigma } from "react-icons/fi";
 import styles from "./home.module.css";
 
 export const projectList = [
-      {
-        slug: "bitbirdie",
-        title: "BitBirdie",
-        image:
-          "https://github.com/Jovian-Dsouza/bitbirdie-nextjs/blob/main/imgs/chat.png?raw=true",
-        repositoryUrl: "https://github.com/Jovian-Dsouza/bitbirdie-nextjs",
-        demoUrl: "https://bitbirdie.vercel.app/",
-      },
-      {
-        slug: "paychatai",
-        title: "PayChatAI (NEAR hackathon Winner)",
-        image:
-          "https://github.com/Jovian-Dsouza/paychatai/blob/main/imgs/paychatai_landing.png?raw=true",
-        repositoryUrl: "https://github.com/Jovian-Dsouza/paychatai",
-        demoUrl: "https://paychatai.vercel.app/",
-      },
-      {
-        slug: "checknights",
-        title: "ChecKnights",
-        image:
-          "https://github.com/Jovian-Dsouza/crypto-checkmate/blob/main/images/game-page.png?raw=true",
-        repositoryUrl: "https://github.com/Jovian-Dsouza/crypto-checkmate/",
-        demoUrl: "https://crypto-checkmate.vercel.app/",
-      },
-      {
-        slug: "enigmapaste",
-        title: "Enigma Paste",
-        image:
-          "https://github.com/Jovian-Dsouza/enigma-paste/blob/main/images/home.png?raw=true",
-        repositoryUrl: "https://github.com/Jovian-Dsouza/enigma-paste",
-        demoUrl: "https://enigma-paste.vercel.app/",
-      },
-      {
-        slug: "ainft",
-        title: "AI NFT",
-        image:
-          "https://github.com/Jovian-Dsouza/AI-nft/blob/dalle/images/demo_mint.png?raw=true",
-        repositoryUrl: "https://github.com/Jovian-Dsouza/AI-nft",
-        demoUrl: "https://ai-nft.joviandsouza.repl.co/",
-      },
-      {
-        slug: "jovidex",
-        title: "Jovi Dex",
-        image: "https://iili.io/HPSE3Lx.jpg",
-        repositoryUrl: "https://github.com/Jovian-Dsouza/jovi-dex",
-        demoUrl: "https://jovi-dex.vercel.app/",
-      },
-    ]
+  {
+    slug: "bitbirdie",
+    title: "BitBirdie (Solana Okto Track Winner 🎉)",
+    image:
+      "https://github.com/Jovian-Dsouza/bitbirdie-nextjs/blob/main/imgs/chat.png?raw=true",
+    repositoryUrl: "https://github.com/Jovian-Dsouza/bitbirdie-nextjs",
+    demoUrl: "https://bitbirdie.vercel.app/",
+  },
+  {
+    slug: "paychatai",
+    title: "PayChatAI (NEAR hackathon Winner 🎉)",
+    image:
+      "https://github.com/Jovian-Dsouza/paychatai/blob/main/imgs/paychatai_landing.png?raw=true",
+    repositoryUrl: "https://github.com/Jovian-Dsouza/paychatai",
+    demoUrl: "https://paychatai.vercel.app/",
+  },
+  {
+    slug: "checknights",
+    title: "ChecKnights",
+    image:
+      "https://github.com/Jovian-Dsouza/crypto-checkmate/blob/main/images/game-page.png?raw=true",
+    repositoryUrl: "https://github.com/Jovian-Dsouza/crypto-checkmate/",
+    demoUrl: "https://crypto-checkmate.vercel.app/",
+  },
+  {
+    slug: "enigmapaste",
+    title: "Enigma Paste",
+    image:
+      "https://github.com/Jovian-Dsouza/enigma-paste/blob/main/images/home.png?raw=true",
+    repositoryUrl: "https://github.com/Jovian-Dsouza/enigma-paste",
+    demoUrl: "https://enigma-paste.vercel.app/",
+  },
+  {
+    slug: "ainft",
+    title: "AI NFT",
+    image:
+      "https://github.com/Jovian-Dsouza/AI-nft/blob/dalle/images/demo_mint.png?raw=true",
+    repositoryUrl: "https://github.com/Jovian-Dsouza/AI-nft",
+    demoUrl: "https://ai-nft.joviandsouza.repl.co/",
+  },
+  {
+    slug: "jovidex",
+    title: "Jovi Dex",
+    image: "https://iili.io/HPSE3Lx.jpg",
+    repositoryUrl: "https://github.com/Jovian-Dsouza/jovi-dex",
+    demoUrl: "https://jovi-dex.vercel.app/",
+  },
+];
 const tabs = [
   {
     name: "Project",
@@ -162,7 +162,7 @@ export default function SectionMyLatestProject() {
             ))}
           </div>
           <div className="overflow-hidden">
-            <div className="bg-gray rounded-[36px] p-[26px] w-full h-[600px] overflow-y-auto">
+            <div className="bg-gray rounded-[36px] p-[26px] w-full h-[600px] overflow-y-auto no-scrollbar">
               <div className="grid grid-flow-row grid-cols-12 gap-[26px]">
                 {tabs.map((tab, tabIndex) =>
                   tab.data.map(
@@ -194,7 +194,7 @@ export default function SectionMyLatestProject() {
                               />
                             </motion.div>
                           </div>
-                          <div className="absolute top-0 bottom-0 left-0 right-0 hidden transition-all duration-300 gap-y-2 group-hover:block bg-gray/10 backdrop-blur-sm rounded-2xl">
+                          <div className="absolute top-0 bottom-0 left-0 right-0 hidden transition-all duration-300 gap-y-2 group-hover:block bg-gray/30 backdrop-blur-md rounded-2xl">
                             <div className="flex flex-col items-center justify-center w-full h-full select-none lg:select-auto">
                               <p className="p-8 text-xl font-bold text-center transition-all duration-150 ease-in-out line-clamp-1">
                                 {item.title}
