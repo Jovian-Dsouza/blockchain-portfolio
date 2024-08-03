@@ -14,6 +14,30 @@ import { FiFigma } from "react-icons/fi";
 import styles from "./home.module.css";
 
 export const projectList = [
+   {
+    slug: "lifafa",
+    title: "LIfafa (Accepted for Blinks Grant 🎉)",
+    image:
+      "https://github.com/Jovian-Dsouza/lifafa-next-js/blob/main/images/lifafa_banner.png?raw=true",
+    repositoryUrl: "https://github.com/Jovian-Dsouza/lifafa-next-js",
+    demoUrl: "https://www.lifafa.fun/",
+  },
+   {
+    slug: "AskAnon",
+    title: "AskAnon (Blinkathon 2nd Place Winner 🎉)",
+    image:
+      "/projects/askanon.png",
+    repositoryUrl: "https://github.com/candypay/askanon",
+    demoUrl: "https://askanon.fun/@DsouzaJovian",
+  },
+  {
+    slug: "picoplay",
+    title: "Picoplay (Bonkathon 2nd Place Winner 🎉)",
+    image:
+      "/projects/picoplay.png",
+    repositoryUrl: "https://github.com/Jovian-Dsouza/picoplay",
+    demoUrl: "https://picoplay.vercel.app/",
+  },
   {
     slug: "okto-rn-sdk",
     title: "Okto React Native SDK",

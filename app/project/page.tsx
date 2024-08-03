@@ -60,7 +60,7 @@ function mapProjectList(projects: any) {
     demoUrl: project.demoUrl,
     summary: project.title, // Assuming the summary is the same as the title
     techStacks: [techStacks.nextJs, techStacks.reactJs, techStacks.nodeJs],
-    projectType: projectTypes[0],
+    projectType: projectTypes[1],
     category: categories[0],
   }));
 }
