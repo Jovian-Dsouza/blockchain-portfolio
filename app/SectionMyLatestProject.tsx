@@ -14,7 +14,15 @@ import { FiFigma } from "react-icons/fi";
 import styles from "./home.module.css";
 
 export const projectList = [
-   {
+  {
+    slug: "blinkify",
+    title: "Blinkify",
+    image:
+      "https://github.com/Jovian-Dsouza/blinkify/blob/main/images/blinkify_home.png?raw=true",
+    repositoryUrl: "https://github.com/Jovian-Dsouza/blinkify",
+    demoUrl: "https://www.blinkify.fun",
+  },
+  {
     slug: "lifafa",
     title: "LIfafa (Accepted for Blinks Grant 🎉)",
     image:
@@ -22,19 +30,17 @@ export const projectList = [
     repositoryUrl: "https://github.com/Jovian-Dsouza/lifafa-next-js",
     demoUrl: "https://www.lifafa.fun/",
   },
-   {
+  {
     slug: "AskAnon",
     title: "AskAnon (Blinkathon 2nd Place Winner 🎉)",
-    image:
-      "/projects/askanon.png",
+    image: "/projects/askanon.png",
     repositoryUrl: "https://github.com/candypay/askanon",
     demoUrl: "https://askanon.fun/@DsouzaJovian",
   },
   {
     slug: "picoplay",
     title: "Picoplay (Bonkathon 2nd Place Winner 🎉)",
-    image:
-      "/projects/picoplay.png",
+    image: "/projects/picoplay.png",
     repositoryUrl: "https://github.com/Jovian-Dsouza/picoplay",
     demoUrl: "https://picoplay.vercel.app/",
   },
