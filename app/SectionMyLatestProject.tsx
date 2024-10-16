@@ -15,8 +15,15 @@ import styles from "./home.module.css";
 
 export const projectList = [
   {
+    slug: "haven",
+    title: "Haven.fan",
+    image: "/projects/haven.png",
+    repositoryUrl: "https://github.com/Jovian-Dsouza/havedotfun-frontend",
+    demoUrl: "https://haven.fan/",
+  },
+  {
     slug: "blinkify",
-    title: "Blinkify",
+    title: "Blinkify (100xDevs hackathon winner 🎉)",
     image:
       "https://github.com/Jovian-Dsouza/blinkify/blob/main/images/blinkify_home.png?raw=true",
     repositoryUrl: "https://github.com/Jovian-Dsouza/blinkify",
