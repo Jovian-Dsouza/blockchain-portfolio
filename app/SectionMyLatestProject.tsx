@@ -16,10 +16,10 @@ import styles from "./home.module.css";
 export const projectList = [
   {
     slug: "moonrace",
-    title: "Moonrace",
+    title: "Moonrace (Unfold24 Sui Track Winner 🎉)",
     image: "https://assets.devfolio.co/hackathons/beea3a652dd04c86b1890bd76bca5451/projects/7670331dbcdd4c79a82948daa5b845c4/23205364-c73b-4678-8d49-17914011021e.png",
     repositoryUrl: "https://github.com/Jovian-Dsouza/moonrace-unfold24",
-    demoUrl: "https://moonrace-unfold24.vercel.app/",
+    demoUrl: "https://devfolio.co/projects/moonrace-226f",
   },
   {
     slug: "haven",
