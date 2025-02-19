@@ -15,6 +15,13 @@ import styles from "./home.module.css";
 
 export const projectList = [
   {
+    slug: "elizaos-coinfibot",
+    title: "ElizaOS Plugin (Twitter AI Agent)",
+    image: "/projects/eliza-coinfibot.png",
+    repositoryUrl: "https://github.com/Jovian-Dsouza/eliza-twitter-bot",
+    demoUrl: "https://x.com/coinfios1121821/with_replies",
+  },
+  {
     slug: "tapster",
     title: "Tapster (EthIndia24 Walrus Track Winner 🎉)",
     image: "https://assets.devfolio.co/hackathons/d64ead180bfc42bda8cee408f6d39b80/projects/0d54eb02e16a4e0a88a71a89fe18ff91/81217efc-fc3a-4c5d-8d79-bc24a2e5936f.jpeg",
