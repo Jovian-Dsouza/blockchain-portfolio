@@ -178,11 +178,7 @@ export default function Project() {
                       <button
                         onClick={(e) => {
                           e.preventDefault();
-                          window.open(
-                            project.demoUrl,
-                            "_blank",
-                            "utm_source=deri.my.id&utm_medium=campaign&utm_campaign=portfolio"
-                          );
+                          window.open(project.demoUrl, "_blank");
                         }}
                         className="flex flex-row items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white transition-all duration-200 transform rounded-lg shadow-lg bg-accent hover:gradient-bg line-clamp-1"
                       >
@@ -199,11 +195,7 @@ export default function Project() {
                       <button
                         onClick={(e) => {
                           e.preventDefault();
-                          window.open(
-                            project.repositoryUrl,
-                            "_blank",
-                            "utm_source=deri.my.id&utm_medium=campaign&utm_campaign=portfolio"
-                          );
+                          window.open(project.repositoryUrl, "_blank");
                         }}
                         rel="noopener noreferrer"
                         className="flex flex-row items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white transition-all duration-200 transform rounded-lg shadow-lg bg-accent hover:gradient-bg line-clamp-1"

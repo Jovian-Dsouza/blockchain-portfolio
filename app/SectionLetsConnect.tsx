@@ -7,8 +7,6 @@ import Image from 'next/image';
 import { assets } from '@/constant/assets';
 import styles from './home.module.css';
 
-const AnimatedImage = motion(Image);
-
 const socialLinks = {
   linkedIn: "https://www.linkedin.com/in/joviandsouza/",
   instagram: "https://www.instagram.com/jovian.dsouza.19/",
@@ -30,13 +28,13 @@ export default function SectionLetsConnect() {
         transition: { duration: 0.5, delay: 0.4 },
         whileHover: { scale: 1.1, transition: { duration: 0.2 } },
         className:
-          "hidden lg:block absolute hover:cursor-pointer top-14 left-14 xl:left-24 w-10 h-10 md:w-[168px] md:h-[168px] z-10",
+          "hidden lg:block absolute top-14 left-14 xl:left-24 w-10 h-10 md:w-[168px] md:h-[168px] z-10",
         src: assets.home.letsConnect.linkedin,
-        alt: "",
+        alt: "LinkedIn",
         width: 168,
         height: 168,
-        tabIndex: 0,
-        onClick: () => window.open(socialLinks.linkedIn, "_blank"),
+        href: socialLinks.linkedIn,
+        ariaLabel: "Connect with Jovian on LinkedIn",
       },
       {
         initial: { y: 50, opacity: 0 },
@@ -44,14 +42,13 @@ export default function SectionLetsConnect() {
         transition: { duration: 0.5, delay: 0.6 },
         whileHover: { scale: 1.1, transition: { duration: 0.2 } },
         className:
-          "hidden lg:block absolute hover:cursor-pointer top-14 right-14 xl:right-24 w-10 h-10 md:w-[168px] md:h-[168px] z-10",
+          "hidden lg:block absolute top-14 right-14 xl:right-24 w-10 h-10 md:w-[168px] md:h-[168px] z-10",
         src: assets.home.letsConnect.instagram,
-        alt: "",
+        alt: "Instagram",
         width: 168,
         height: 168,
-        tabIndex: 0,
-        onClick: () =>
-          window.open(socialLinks.instagram, "_blank"),
+        href: socialLinks.instagram,
+        ariaLabel: "Follow Jovian on Instagram",
       },
       {
         initial: { y: -50, opacity: 0 },
@@ -59,14 +56,13 @@ export default function SectionLetsConnect() {
         transition: { duration: 0.5, delay: 1 },
         whileHover: { scale: 1.1, transition: { duration: 0.2 } },
         className:
-          "hidden lg:block absolute hover:cursor-pointer bottom-14 right-36 xl:right-44 md:right-24 w-10 h-10 md:w-[168px] md:h-[168px] z-10",
+          "hidden lg:block absolute bottom-14 right-36 xl:right-44 md:right-24 w-10 h-10 md:w-[168px] md:h-[168px] z-10",
         src: assets.home.letsConnect.github,
-        alt: "",
+        alt: "GitHub",
         width: 168,
         height: 168,
-        tabIndex: 0,
-        onClick: () =>
-          window.open(socialLinks.github, "_blank"),
+        href: socialLinks.github,
+        ariaLabel: "View Jovian's code on GitHub",
       },
       {
         initial: { y: -50, opacity: 0 },
@@ -74,14 +70,13 @@ export default function SectionLetsConnect() {
         transition: { duration: 0.5, delay: 0.8 },
         whileHover: { scale: 1.1, transition: { duration: 0.2 } },
         className:
-          "hidden lg:block absolute hover:cursor-pointer bottom-14 left-36 xl:left-44 md:left-24 w-10 h-10 md:w-[168px] md:h-[168px] z-10",
+          "hidden lg:block absolute bottom-14 left-36 xl:left-44 md:left-24 w-10 h-10 md:w-[168px] md:h-[168px] z-10",
         src: assets.home.letsConnect.twitter,
-        alt: "",
+        alt: "Twitter",
         width: 168,
         height: 168,
-        tabIndex: 0,
-        onClick: () =>
-          window.open(socialLinks.twitter, "_blank"),
+        href: socialLinks.twitter,
+        ariaLabel: "Follow Jovian on Twitter",
       },
       {
         initial: { y: 100, opacity: 0 },
@@ -89,13 +84,13 @@ export default function SectionLetsConnect() {
         transition: { duration: 0.5, delay: 0 },
         whileHover: { scale: 1.1, transition: { duration: 0.2 } },
         className:
-          "hidden lg:block absolute hover:cursor-pointer -bottom-64 w-10 h-10 md:w-[310px] md:h-[310px] z-10",
+          "hidden lg:block absolute -bottom-64 w-10 h-10 md:w-[310px] md:h-[310px] z-10",
         src: assets.home.letsConnect.gmail,
-        alt: "",
+        alt: "Email",
         width: 310,
         height: 310,
-        tabIndex: 0,
-        onClick: () => window.open(socialLinks.mail, "_self"),
+        href: socialLinks.mail,
+        ariaLabel: "Send Jovian an email",
       },
     ];
 
@@ -110,26 +105,105 @@ export default function SectionLetsConnect() {
                     <div className="hidden lg:block absolute animate-ping -z-[2]">
                         <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={inView ? { scale: 1, opacity: 1 } : {}} transition={{ duration: .5, delay: 1 }} className="rounded-full gradient-bg h-96 w-96"></motion.div>
                     </div>
-                    <AnimatedImage
+                    <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         animate={inView ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className='w-52 h-52 md:w-[330px] md:h-[330px] lg:w-[530px] lg:h-[530px] rounded-full bg-gray lg:bg-transparent'
-                        src={assets.home.letsConnect.avatarBigSmile}
-                        alt=''
-                        width={530}
-                        height={530}
-                        priority
-                    />
-                    {socialMediaLinks.map((socialMediaLink, index) => (
-                        <AnimatedImage key={index.toString()} {...socialMediaLink} />
+                    >
+                        <Image
+                            className='w-52 h-52 md:w-[330px] md:h-[330px] lg:w-[530px] lg:h-[530px] rounded-full bg-gray lg:bg-transparent'
+                            src={assets.home.letsConnect.avatarBigSmile}
+                            alt='Jovian Dsouza'
+                            width={530}
+                            height={530}
+                            priority
+                        />
+                    </motion.div>
+                    {socialMediaLinks.map((link, index) => (
+                        <motion.a
+                            key={index.toString()}
+                            href={link.href}
+                            target={link.href.startsWith("mailto:") ? "_self" : "_blank"}
+                            rel="noopener noreferrer"
+                            aria-label={link.ariaLabel}
+                            className={link.className}
+                            initial={link.initial}
+                            animate={link.animate}
+                            transition={link.transition}
+                            whileHover={link.whileHover}
+                        >
+                            <Image
+                                src={link.src}
+                                alt={link.alt}
+                                width={link.width}
+                                height={link.height}
+                            />
+                        </motion.a>
                     ))}
                     <div className='flex flex-row flex-wrap items-center justify-center gap-3 mt-4 lg:hidden'>
-                        <AnimatedImage initial={{ y: 50, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.4 }} className="z-[1] hover:cursor-pointer w-[100px] h-[100px]" src={assets.home.letsConnect.linkedin} alt='' width={100} height={100} tabIndex={0} onClick={() => window.open(socialLinks.linkedIn, '_blank')} />
-                        <AnimatedImage initial={{ y: -50, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.8 }} className="z-[1] hover:cursor-pointer w-[100px] h-[100px]" src={assets.home.letsConnect.twitter} alt='' width={100} height={100} tabIndex={0} onClick={() => window.open(socialLinks.twitter, '_blank')} />
-                        <AnimatedImage initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0 }} className="z-[1] hover:cursor-pointer w-[100px] h-[100px]" src={assets.home.letsConnect.gmail} alt='' width={100} height={100} tabIndex={0} onClick={() => window.open(socialLinks.mail, "_self")} />
-                        <AnimatedImage initial={{ y: 50, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.6 }} className="z-[1] hover:cursor-pointer w-[100px] h-[100px]" src={assets.home.letsConnect.instagram} alt='' width={100} height={100} tabIndex={0} onClick={() => window.open(socialLinks.instagram, '_blank')} />
-                        <AnimatedImage initial={{ y: -50, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.5, delay: 1 }} className="z-[1] hover:cursor-pointer w-[100px] h-[100px]" src={assets.home.letsConnect.github} alt='' width={100} height={100} tabIndex={0} onClick={() => window.open(socialLinks.github, '_blank')} />
+                        <motion.a
+                            href={socialLinks.linkedIn}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Connect with Jovian on LinkedIn"
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={inView ? { y: 0, opacity: 1 } : {}}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                            className="z-[1] w-[100px] h-[100px]"
+                        >
+                            <Image src={assets.home.letsConnect.linkedin} alt="LinkedIn" width={100} height={100} />
+                        </motion.a>
+                        <motion.a
+                            href={socialLinks.twitter}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Follow Jovian on Twitter"
+                            initial={{ y: -50, opacity: 0 }}
+                            animate={inView ? { y: 0, opacity: 1 } : {}}
+                            transition={{ duration: 0.5, delay: 0.8 }}
+                            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                            className="z-[1] w-[100px] h-[100px]"
+                        >
+                            <Image src={assets.home.letsConnect.twitter} alt="Twitter" width={100} height={100} />
+                        </motion.a>
+                        <motion.a
+                            href={socialLinks.mail}
+                            aria-label="Send Jovian an email"
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={inView ? { y: 0, opacity: 1 } : {}}
+                            transition={{ duration: 0.5, delay: 0 }}
+                            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                            className="z-[1] w-[100px] h-[100px]"
+                        >
+                            <Image src={assets.home.letsConnect.gmail} alt="Email" width={100} height={100} />
+                        </motion.a>
+                        <motion.a
+                            href={socialLinks.instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Follow Jovian on Instagram"
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={inView ? { y: 0, opacity: 1 } : {}}
+                            transition={{ duration: 0.5, delay: 0.6 }}
+                            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                            className="z-[1] w-[100px] h-[100px]"
+                        >
+                            <Image src={assets.home.letsConnect.instagram} alt="Instagram" width={100} height={100} />
+                        </motion.a>
+                        <motion.a
+                            href={socialLinks.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View Jovian's code on GitHub"
+                            initial={{ y: -50, opacity: 0 }}
+                            animate={inView ? { y: 0, opacity: 1 } : {}}
+                            transition={{ duration: 0.5, delay: 1 }}
+                            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                            className="z-[1] w-[100px] h-[100px]"
+                        >
+                            <Image src={assets.home.letsConnect.github} alt="GitHub" width={100} height={100} />
+                        </motion.a>
                     </div>
                 </div>
             </div>

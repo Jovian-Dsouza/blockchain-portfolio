@@ -15,6 +15,19 @@
   * {
     -webkit-tap-highlight-color: transparent;
   }
+
+  /* Accessible focus states */
+  *:focus-visible {
+    outline: 2px solid #A293FF;
+    outline-offset: 2px;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #A293FF;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 }
 
 @layer utilities {
@@ -49,9 +62,16 @@
 
 /* Start of gradient button */
 .gradient-btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-2px);
   color: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.1);
+}
+
+.gradient-btn:focus-visible {
+  outline: 2px solid #A293FF;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(162, 147, 255, 0.3);
 }
 .gradient-btn:active {
   transform: scale(0.9);

@@ -76,7 +76,7 @@ export default function SectionTechnologyStack() {
         <section ref={ref} className={`safe-x-padding ${styles.sectionDistance}`}>
             <div className='text-center'>
                 <motion.h2 initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.5 }} className={styles.sectionTitle}>Technology Stack</motion.h2>
-                <motion.p initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.7 }} className={`${styles.sectionDescription} max-w-[960px] mx-auto`}>I are concerned about security and performance for my client. That&apos;s why I always keep updating and use best technologies in a product</motion.p>
+                <motion.p initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.7 }} className={`${styles.sectionDescription} max-w-[960px] mx-auto`}>I am concerned about security and performance for my clients. That&apos;s why I always keep updating and use best technologies in a product</motion.p>
             </div>
             <div className='flex items-center justify-center mt-12'>
                 <div className='flex flex-row gap-[50px] max-w-[864px] flex-wrap justify-center items-center'>
@@ -98,14 +98,7 @@ export default function SectionTechnologyStack() {
                                     alt={item.name}
                                 />
                                 <Link
-                                    href={{
-                                        pathname: item.officialSite,
-                                        query: {
-                                            utm_source: 'deri.my.id',
-                                            utm_medium: 'campaign',
-                                            utm_campaign: 'portfolio'
-                                        }
-                                    }}
+                                    href={item.officialSite}
                                     target="_blank"
                                     title={`Figure out about ${item.name}`}
                                 >

@@ -209,7 +209,7 @@ export default function SectionMyLatestProject() {
               >
                 <Image
                   src={tab.image}
-                  alt=""
+                  alt={tab.name}
                   width={100}
                   height={100}
                   style={{ height: "auto" }}
@@ -255,7 +255,7 @@ export default function SectionMyLatestProject() {
                               <img
                                 className="object-contain h-full "
                                 src={item.image}
-                                alt=""
+                                alt={`Screenshot of ${item.title}`}
                               />
                             </motion.div>
                           </div>
@@ -268,14 +268,7 @@ export default function SectionMyLatestProject() {
                                 {item.repositoryUrl && (
                                   <Link
                                     className="p-4 transition-all duration-150 ease-in-out bg-gray rounded-2xl hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-secondary"
-                                    href={{
-                                      pathname: item.repositoryUrl,
-                                      query: {
-                                        utm_source: "deri.my.id",
-                                        utm_medium: "campaign",
-                                        utm_campaign: "portfolio",
-                                      },
-                                    }}
+                                    href={item.repositoryUrl}
                                     target="_blank"
                                     title="Repository"
                                   >
@@ -290,14 +283,7 @@ export default function SectionMyLatestProject() {
                                 {item.demoUrl && (
                                   <Link
                                     className="p-4 transition-all duration-300 ease-in-out bg-gray rounded-2xl hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-secondary"
-                                    href={{
-                                      pathname: item.demoUrl,
-                                      query: {
-                                        utm_source: "deri.my.id",
-                                        utm_medium: "campaign",
-                                        utm_campaign: "portfolio",
-                                      },
-                                    }}
+                                    href={item.demoUrl}
                                     target="_blank"
                                     title="Demo"
                                   >

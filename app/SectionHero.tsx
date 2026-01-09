@@ -83,12 +83,11 @@ export default function SectionHero(): JSX.Element {
           >
             Welcome to Jovian&apos;s Portfolio
           </motion.p>
-          <motion.h2
+          <motion.h1
             className="font-montserrat font-extrabold text-5xl md:text-[64px] md:leading-[56px] lg:text-[66px] lg:leading-[88px] gradient-text mb-6 text-center xl:text-left"
-            aria-label="Full Stack Blockchain Developer"
           >
             Full Stack Blockchain Developer
-          </motion.h2>
+          </motion.h1>
           <motion.p
             className="text-base font-medium text-center md:text-xl lg:text-2xl text-accent xl:text-left"
             aria-label="Hi, I'm Jovian Dsouza. A passionate Full stack Blockchain Developer based in India. 📍"
@@ -107,12 +106,11 @@ export default function SectionHero(): JSX.Element {
                   src={assets.home.hero.avatarSmile}
                   width={480}
                   height={480}
-                  alt=""
+                  alt="Jovian Dsouza - Full Stack Blockchain Developer"
                   priority
                   initial={{ opacity: 0.5, y: 500 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 0.2, duration: 1 }}
-                  aria-label="Jovian's Avatar"
                 />
               </motion.div>
               {animatedImages.map(
