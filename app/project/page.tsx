@@ -35,19 +35,18 @@ const projectTypes = [
 const techStacks = {
   nextJs: {
     name: "Next JS",
-    imageUrl:
-      "https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-11yvtwzn.png",
+    image: assets.home.technologyStack.nextJs,
     webUrl: "https://nextjs.org/",
   },
   reactJs: {
     name: "React JS",
-    imageUrl: "https://img.icons8.com/?size=512&id=123603&format=png",
+    image: assets.home.technologyStack.reactJs,
     webUrl: "https://reactjs.org/",
   },
-  nodeJs: {
-    name: "Node JS",
-    imageUrl: "https://img.icons8.com/?size=512&id=hsPbhkOH4FMe&format=png",
-    webUrl: "https://nodejs.org/en/",
+  typescript: {
+    name: "TypeScript",
+    image: assets.home.technologyStack.typescript,
+    webUrl: "https://www.typescriptlang.org/",
   },
 };
 
@@ -59,7 +58,7 @@ function mapProjectList(projects: any) {
     repositoryUrl: project.repositoryUrl,
     demoUrl: project.demoUrl,
     summary: project.title, // Assuming the summary is the same as the title
-    techStacks: [techStacks.nextJs, techStacks.reactJs, techStacks.nodeJs],
+    techStacks: [techStacks.nextJs, techStacks.reactJs, techStacks.typescript],
     projectType: projectTypes[1],
     category: categories[0],
   }));
@@ -75,7 +74,7 @@ function mapProjectList(projects: any) {
 //     demoUrl: "https://bitbirdie.vercel.app/",
 //     summary:
 //       "Bitbridie",
-//     techStacks: [techStacks.nextJs, techStacks.reactJs, techStacks.nodeJs],
+//     techStacks: [techStacks.nextJs, techStacks.reactJs, techStacks.typescript],
 //     projectType: projectTypes[0],
 //     category: categories[0],
 //   },
@@ -156,13 +155,11 @@ export default function Project() {
                           className="p-1 bg-white border-[0.5px] border-gray/70 rounded-full hover:cursor-help"
                         >
                           <Image
-                            src={techStack.imageUrl}
+                            src={techStack.image}
                             alt={`${techStack.name} icon`}
-                            loader={({ src }) => src}
                             width={36}
                             height={36}
                             title={techStack.name}
-                            unoptimized
                           />
                         </motion.div>
                       ))}
